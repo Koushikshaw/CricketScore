@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Score Calculator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head">
+        <p>Score CalC</p>
+      </div>
+      <div class="main-container">
+        <div class="inputs">
+            <div class="confirmation">Submitted Sucesdfully</div>
+            <p class="title">INPUT BOX</p>
+            <form name="team1" team1Ask>
+                <p>Team 1 (Name) : </p>
+                <input type="text" class="team1"/>
+                <button team1Submit>Submit</button>
+            </form>
+            <form name="team2" team2Ask>
+                <p>Team 2 (Name) : </p>
+                <input type="text" class="team2"/>
+                <button team2Submit>Submit</button>
+            </form>
+            <form name="overs" oversAsk>
+                <p>Overs : </p>
+                <input type="number" class="oversNo"/>
+                <button oversSubmit>Submit</button>
+            </form>
+        </div>
+        <div class="toss">
+            <p class="title">Toss</p>
+            <p><span class="team-toss"></span> (choose between two below) : </p>
+            <div>
+                <div class="choice grayscale">H</div>
+                <div class="choice grayscale">T</div>
+            </div>
+            <div results-toss></div>
+        </div>
+        <div class="tossChoice">
+          <p class="title"><span tossWin></span> Choose</p>
+          <form tossChoice>
+            <input type="radio" name="choice" id="" class="bat">Batting
+            <input type="radio" name="choice" id="" class="bat">Bowling
+            <button tossSubmit>Submit</button>
+          </form>
+          <p tossRR></p>
+        </div>
+        <div class="score-pallete">
+          <p><span></span></p>
+            <p class="title">Score</p>
+            <div class="runs-select">
+                <p class="runs">0</p>
+                <p class="runs">1</p>
+                <p class="runs">2</p>
+                <p class="runs">3</p>
+                <p class="runs">4</p>
+                <p class="runs">6</p>
+                <p class="runs">W</p>
+                <!-- <p class="runs">Wd</p>
+                <p class="runs">Nb</p> -->
+            </div>
+            <div class="score">
+                <div><span>Score : </span><span runs>0</span> / <span wicket>0</span></div>
+                <div><span>Overs : </span><span></span></div>
+                <div class="team">
+                    <div class="team1">
+                        <span></span><span></span>
+                    </div>
+                    <div class="team2">
+                        <span></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

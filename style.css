@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+    /* text-align: center; */
+}
+
+:root{
+    --darkCyan:#257180;
+    --paleYellow:#F2E5BF;
+    --lightOrange:#FD8B51;
+    --darkerOrange:#CB6040;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--paleYellow);
+}
+
+.head{
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color:black;
+    
+    color: var(--darkerOrange);
+    /* filter: drop-shadow(1px 1px 2px  black); */
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.toss{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+.toss.active{
+    display: flex;
+}
+
+.toss div{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.choice{
+    background-color: rgba(7, 221, 7, 0.667);
+    width: 150px;
+    height: 150px;
+    border-radius:50% ; 
+    font-size: 5rem;
+    font-weight: 600;
+    filter: drop-shadow(2px 2px 2px black);
+    color: white;
+}
+.choice:hover{
+    filter: none;
+    cursor: pointer;
+}
+
+.runs-select{
+    display: flex;
+    gap:10px;
+}
+
+.runs{
+    padding: 20px 30px;
+    border: 2px solid var(--darkCyan);
+    border-radius: 100%;
+}
+
+.runs{
+    cursor: pointer;
+}
+.runs:hover{
+    background-color: var(--darkerOrange);
+    color: white;
+    font-weight: 12px;
+    border: 2px solid var(--darkerOrange);
+}
+
+.inputs form input{
+    all: unset;
+    background-color: white;
+    padding: 2px 10px;
+    border: 2px solid rgba(128, 128, 128, 0.145);
+    /* border-radius: 5px; */
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* form input:focus{
+    outline: 2px solid grey;
+} */
+form button{
+    all: unset;
+    background-color: rgba(7, 221, 7, 0.667);
+    font-weight: 600;
+    /* background-color: green; */
+    padding: 2px 5px;
+    color: white;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* border: 2px solid greenyellow; */
+    /* outline: 2px solid yellow; */
+}
+.inputs{
+    max-width: 20rem;
+    margin: auto;
+    padding: 5px 10px;
+    /* position: relative; */
+    /* filter: blur(100%); */
+    color: rgb(49, 49, 49);
+    display: none;
+    /* border: 2px solid grey; */
+}
+.inputs .confirmation{
+    display: none;
+    position: absolute;
+    right:0;
+    top: 10px;
+    padding: 10px 50px;
+    background-color: rgba(7, 221, 7, 0.667);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: all 2s ease-in-out;
+}
+.inputs .confirmation.active{
+    display: flex;
+}
+.inputs.active{
+    display: block;
+}
+.score-pallete{
+    text-align: center;
+    display: none;
+}
+.score-pallete.active{
+    display: block;
+}
+.grayscale{
+    filter: grayscale(100%) drop-shadow(2px 2px 2px black);
+
+}
+.choosen{
+    background-color: rgba(7, 221, 7, 0.667);
+}
+.win{
+    /* background-color: var(--darkerOrange); */
+    border: 10px solid white;
+}
+.title{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight:700;
+    text-transform: uppercase;
+}
+.tossChoice{
+    display: none;
+    flex-direction: column;
+    gap:20px;
+}
+.tossChoice.active{
+    display: flex;
+}
+.tossChoice form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.tossChoice p:last-of-type{
+    text-align: center;
+}
